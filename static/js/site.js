@@ -13,7 +13,6 @@ pushForm.addEventListener('submit', async function (e){
     const body = textarea.value;
     const meta = document.querySelector('meta[name="user_id"]');
     const id = meta ? meta.content : null;
-    console.log(id)
     
     if (head && body && id){
         button.innerText = 'Sending...';
@@ -38,7 +37,6 @@ pushForm.addEventListener('submit', async function (e){
         }
     } else {
         let error;
-        console.log(error)
         if (!head || !body){
             error = 'Please ensure you complete the form'
         } else if (!id){

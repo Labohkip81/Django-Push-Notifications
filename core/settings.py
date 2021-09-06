@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-kdkyd8a39_38mtx)-fsgt#p+08))*h$!%o*5g#8iejj3d*iz(h
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*',]
 
 
 # Application definition
@@ -132,3 +132,10 @@ STATICFILES_DIRS = [
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+#start of push notifications on django
+
+WP_PRIVATE = BASE_DIR / 'private_key.pem'
+WP_CLAIMS = {
+    "sub": "mailto: labankiplagat81@gmail.com",
+    "aud": "https://android.googleapis.com"
+}
